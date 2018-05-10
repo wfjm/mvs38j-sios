@@ -1,5 +1,14 @@
-This directory contains assembler macros or small code sections for
-text handling and a very simple I/O system. The modules are
+This small helper project contains assembler macros and procedures for a
+very simple I/O system to be used in small, less than 8k code,
+assembler programs.
+
+The code was initially developed as part of the
+[mvs38j-langtest](https://github.com/wfjm/mvs38j-langtest) project,
+and later also used in the
+[s370-perf](https://github.com/wfjm/s370-perf) project.
+It is now factored out in a separate project and used as submodule.
+
+The available modules are
 
 | File | Function |
 | -----| -------- |
@@ -18,6 +27,8 @@ text handling and a very simple I/O system. The modules are
 | [sos_oint12.asm](sos_oint12.asm)     | `OINT12`: output integer in `%12d` format  |
 | [sos_oregdmp.asm](sos_oregdmp.asm)   | `OREGDMP`: output register dump |
 
-See also the test code [test_sos.asm](../tests/test_sos.asm) in the
-[tests](../tests) directory which serves as simple test bench for
-output modules.
+A test code
+[test_sos.asm](https://github.com/wfjm/mvs38j-langtest/blob/master/tests/test_sos.asm), which serves as simple test bench for output modules, is available in the
+[tests](https://github.com/wfjm/mvs38j-langtest/tree/master/tests)
+directory of the
+[mvs38j-langtest](https://github.com/wfjm/mvs38j-langtest) project.
