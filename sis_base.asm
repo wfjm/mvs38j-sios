@@ -29,9 +29,10 @@ IGETLINE ST    R14,IGETLNEL       save R14
 IGETLNEL DS    F                  save area for R14 (return linkage)
 *
 * IEOFHDL --------------------------------------------------
-*   EODAD call-back routine. R2-R13 are preserved. R0,R1,R14,R15 are modified,
-*   with R14 holding address of calling macro. So code executes in the same
-*   environment as prior to the GET call, especially base registers are kept.
+*   EODAD call-back routine. R2-R13 are preserved. R0,R1,R14,R15 are,
+*   modified, with R14 holding address of calling macro. So code
+*   executes in the same environment as prior to the GET call,
+*   especially base registers are kept.
 *
 IEOFHDL  L     R15,IEOFEXIT       load user exit address
          LTR   R15,R15            test address
